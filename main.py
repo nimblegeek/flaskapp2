@@ -37,6 +37,10 @@ create_users_table()
 def index():
     return render_template("index.html")
 
+@app.route("/explore_open_mats")
+def explore_open_mats():
+    return render_template("explore_open_mats.html")
+
 @app.route("/users")
 def get_users():
     conn = get_db_connection()
